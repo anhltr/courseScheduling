@@ -1,5 +1,5 @@
 # Course Scheduling System
-Clock Scheduler System is a web-based application designed to simplify and automate academic scheduling for institutions. It enables administrators to efficiently manage courses, instructors, and time slots while ensuring conflict-free scheduling.
+Course Scheduler System is a web-based application designed to simplify and automate academic scheduling for institutions. It enables administrators to efficiently manage courses, instructors, and time slots while ensuring conflict-free scheduling.
 
 <div style="display: flex; flex-direction: column;"> <div> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML5" width="40" height="40" /> <strong>HTML5</strong> </div> <div> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS3" width="40" height="40" /> <strong>CSS3</strong> </div> <div> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="40" height="40" /> <strong>JavaScript</strong> </div> </div>
 
