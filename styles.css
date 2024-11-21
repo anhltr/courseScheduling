@@ -1,0 +1,214 @@
+/* General page styles */
+
+/* Header styling */
+.header {
+ display: flex;
+ align-items: center;
+ padding: 10px 20px;
+ background-color: #0039a6;
+}
+
+/* Logo styling */
+.logo {
+ width: 230px;
+ height: auto;
+ margin-right: 100px;
+ vertical-align: middle;
+}
+
+/* Heading styling */
+.header h1 {
+ font-size: 3rem;
+ margin: 0;
+ color: white;
+ line-height: 1;
+}
+
+body {
+ font-family: Roboto, sans-serif;
+ margin: 10px;
+ background-color: #0039a6;
+}
+
+/* Wrapper to center the tab container */
+.tab-wrapper {
+ display: flex;
+ justify-content: center;
+ margin-bottom: 20px;
+}
+
+/* Container for horizontal tab buttons */
+.tab {
+ display: inline-flex;
+ justify-content: flex-start;
+ border-bottom: 5px solid #0039a6;
+ margin-bottom: 0px;
+}
+
+/* Tab button styling */
+.tablinks {
+ background-color: #f1f1f1;
+ padding: 5px 20px;
+ cursor: pointer;
+ transition: background-color 0.3s;
+ font-size: 20px;
+ color: #333;
+ border-radius: 10px;
+}
+
+.tablinks:hover {
+ background-color: #ddd;
+}
+
+/* Active tab styling */
+.tablinks.active {
+ background-color: #0039a6;
+ color: white;
+ font-weight: bold;
+}
+
+/* Content for each tab section */
+.tabcontent {
+ display: none;
+ padding: 20px;
+ border: 1px solid #0039a6;
+ border-radius: 10px;
+}
+
+/* Show the active tab content */
+.tabcontent.active {
+ display: block;
+}
+
+/* Container for the sections */
+.container {
+ max-width: 1100px;
+ margin: 0 auto;
+ padding: 20px;
+ background-color: white;
+ border-radius: 10px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section title styles */
+h2 {
+ color: #0039a6;
+ font-size: 1.5rem;
+ margin-bottom: 10px;
+}
+
+/* Form styles */
+form label {
+ display: block;
+ font-weight: 500;
+ margin-top: 10px;
+ color: #333;
+}
+
+form input,
+form select {
+ width: 100%;
+ padding: 8px;
+ margin-top: 5px;
+ margin-bottom: 5px;
+ border: 1px solid #0039a6;
+ border-radius: 5px;
+ box-sizing: border-box;
+}
+
+/* Table styles */
+table {
+ width: 100%;
+ border-collapse: collapse;
+ margin-top: 20px;
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+th {
+ padding: 10px;
+ border: 1px solid whitesmoke;
+ background-color: #0039a6;
+ color: white;
+ text-align: center;
+ border-radius: 5px;
+}
+
+td {
+ padding: 10px;
+ border: 1px solid whitesmoke;
+ text-align: center;
+ color: #555;
+}
+
+tr:hover {
+ background-color: #e8eaf6;
+}
+
+/* Button styles */
+button {
+ padding: 10px;
+ border: 1px solid whitesmoke;
+ border-radius: 5px;
+ background-color: #0039a6;
+ color: white;
+ display: block;
+ width: 260px;
+ margin: 20px auto;
+ cursor: pointer;
+ font-weight: 500;
+}
+
+/* Hover effect for button */
+button:hover {
+ background-color: #5c6bc0;
+}
+
+/* Table row hover effect */
+tr:hover td {
+ background-color: #0924c0;
+}
+
+/* Responsive form and table adjustments */
+@media (max-width: 600px) {
+ form input,
+ form select {
+  width: 100%;
+ }
+
+ button {
+  width: 100%;
+ }
+
+ table {
+  font-size: 0.9rem;
+ }
+}
+/* Container for the checkboxes */
+#preferences,
+#unavailableTimeSlots {
+ display: grid;
+ grid-template-columns: repeat(6, 1fr);
+ gap: 1px;
+ justify-items: start;
+}
+
+/* Wrapper for each checkbox-label pair */
+.checkbox-wrapper {
+ display: flex;
+ align-items: center;
+ justify-content: flex-start;
+ padding: 0px;
+ box-sizing: border-box;
+ min-height: 10px;
+ white-space: nowrap;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+ margin-right: 6px;
+}
+
+#preferences label,
+#unavailableTimeSlots label {
+ font-size: 0.8rem;
+ line-height: 1.4;
+}

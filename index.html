@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <title>Clock Scheduler System</title>
+  <link rel="stylesheet" href="styles.css" />
+ </head>
+ <body>
+  <header class="header">
+   <img src="logo2.jpg" alt="System Logo" class="logo" />
+   <h1>Department of Computer Science</h1>
+  </header>
+
+  <div class="container">
+   <!-- Tab navigation for switching between sections -->
+   <div class="tab-wrapper">
+    <div class="tab">
+     <button
+      class="tablinks"
+      onclick="openTab(event, 'CourseTab')"
+      id="defaultOpen">
+      Course
+     </button>
+     <button class="tablinks" onclick="openTab(event, 'InstructorTab')">
+      Instructor
+     </button>
+     <button class="tablinks" onclick="openTab(event, 'ViewData')">
+      Data & Schedule
+     </button>
+    </div>
+   </div>
+
+   <!-- Course Entry Tab Content -->
+   <div id="CourseTab" class="tabcontent">
+    <h2>Course Form</h2>
+    <form id="course-form">
+     <label for="courseName">Course Name:</label>
+     <input type="text" id="courseName" required /><br />
+
+     <label for="courseLevel">Course Level:</label>
+     <select id="courseLevel">
+      <option value="1000">1000</option>
+      <option value="2000">2000</option>
+      <option value="3000">3000</option>
+      <option value="4000">4000</option></select
+     ><br />
+
+     <label for="creditHours">Credit Hours:</label>
+     <select id="creditHours">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option></select
+     ><br />
+     <label for="courseDuration">Course Duration (hours):</label>
+     <select id="courseDuration">
+      <option value="1.5">1.5</option>
+      <option value="3">3</option></select
+     ><br />
+
+     <label for="sectionLimit">Section Limit:</label>
+     <input type="number" id="sectionLimit" required /><br />
+
+     <label for="numClasses">Number of Classes:</label>
+     <input type="number" id="numClasses" required /><br />
+
+     <button type="button" onclick="addCourse()">Add Course</button>
+    </form>
+   </div>
+
+   <!-- Instructor Entry Tab Content -->
+   <div id="InstructorTab" class="tabcontent">
+    <h2>Instructor Form</h2>
+    <form id="instructor-form">
+     <label for="instructorName">Instructor Name:</label>
+     <input type="text" id="instructorName" required /><br />
+     <label for="teachingLoad">Teaching Load:</label>
+     <select id="teachingLoad">
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option></select
+     ><br />
+
+     <label for="preferences">Course Preferences:</label>
+     <div id="preferences" class="checkbox-container">
+      <!-- Courses will be populated as checkboxes here -->
+     </div>
+     <br />
+
+     <label for="unavailableTimeSlots">Unavailable Time Slots:</label>
+     <div id="unavailableTimeSlots" class="grid-container">
+      <!-- Time slots will be organized neatly here -->
+     </div>
+     <br />
+
+     <button type="button" onclick="addInstructor()">Add Instructor</button>
+    </form>
+   </div>
+
+   <!-- View Data & Schedule Tab Content -->
+   <div id="ViewData" class="tabcontent">
+    <h2>Course and Instructor Data</h2>
+
+    <!-- Course Table -->
+    <h3>Course</h3>
+    <table id="courseTable">
+     <thead>
+      <tr>
+       <th>Course Name</th>
+       <th>Level</th>
+       <th>Credit Hours</th>
+       <th>Duration</th>
+       <th>Seats</th>
+       <th>Classes</th>
+      </tr>
+     </thead>
+     <tbody></tbody>
+    </table>
+
+    <!-- Instructor Table -->
+    <h3>Instructor</h3>
+    <table id="instructorTable">
+     <thead>
+      <tr>
+       <th>Instructor Name</th>
+       <th>Teaching Load</th>
+       <th>Preferences</th>
+       <th>Unavailable</th>
+      </tr>
+     </thead>
+     <tbody></tbody>
+    </table>
+
+    <!-- Schedule Output -->
+    <h3>Schedule</h3>
+
+    <table id="scheduleTable">
+     <thead>
+      <tr>
+       <th>Course Name</th>
+       <th>Level</th>
+       <th>Hours</th>
+       <th>Seats</th>
+       <th>Instructor</th>
+       <th>Time Slot</th>
+      </tr>
+     </thead>
+     <tbody></tbody>
+    </table>
+    <button onclick="generateSchedule()">Generate Schedule</button>
+   </div>
+  </div>
+
+  <script src="main.js"></script>
+  <script>
+   // Open the default tab (Course Entry) on page load
+   document.getElementById("defaultOpen").click();
+
+   // Function to switch tabs
+   function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+     tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+   }
+  </script>
+ </body>
+</html>
